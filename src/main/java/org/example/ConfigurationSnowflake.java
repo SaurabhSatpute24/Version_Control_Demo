@@ -14,11 +14,10 @@ public class ConfigurationSnowflake {
         Map<String, String> properties = new HashMap<>();
         properties.put("URL","https://epxbxff-xl81092.snowflakecomputing.com:443");
         properties.put("USER", "AnushkaDBT");
-//        System.out.print("Enter Password:- ");
+        System.out.print("Enter Password:- ");
         String password= null;
-        Console console = System.console();
-        if(console != null){
-            password = Arrays.toString(console.readPassword("Enter Password: "));
+        if(sc != null){
+            password = sc.nextLine();
         }
         if(password.isEmpty())
         {
